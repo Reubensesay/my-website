@@ -332,8 +332,13 @@ main {
 }
 
 .avatar-box {
- 
-  border-radius: 50px;
+    width: 100%;
+    max-width: 150px; /* adjust this to fit your layout */
+    height: auto;
+    border-radius: 10px; /* optional for rounded edges */
+    display: block;
+    margin: auto;
+  
 }
 
 .info-content .name {
@@ -1568,7 +1573,30 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 30px 15px;
   }
 
-
+  @media (max-width: 767px) {
+    .profile-img {
+      max-width: 100px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  
+    .sidebar, article {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .sidebar-info {
+      text-align: center;
+    }
+  
+    .contacts-list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  
 
   /**
    * NAVBAR
